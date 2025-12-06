@@ -1,0 +1,5 @@
+Thank you so much for this opportunity to introduce myself.
+
+my name is dhruv mali and i am from Surat i completed my BCA and I am pursuing MCA in cloud computing from Paruluniversity
+I have hand-on experience with aws, docker,git , GitHub , github action and liunx and work on ci/cd automation and cloud based project
+I also hold certification include aws academy cloud foundations, aws cloud architecting and Microsoft azure az-900 which help to understand of cloud infrastruchar and devops automation. 
