@@ -181,15 +181,13 @@
             border-radius: 16px;
             padding: 32px;
             margin: 24px 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            will-change: transform;
         }
 
         .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            background: var(--glass-secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
         }
 
         /* Hero section */
@@ -303,34 +301,16 @@
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.2s ease, opacity 0.2s ease;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .btn:hover::before {
-            left: 100%;
         }
 
         .btn-primary {
             background: var(--background-secondary);
             color: var(--text-primary);
-            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
         }
 
         .btn-secondary {
@@ -341,8 +321,8 @@
         }
 
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            opacity: 0.9;
         }
 
         /* Skills section */
@@ -358,51 +338,14 @@
             padding: 24px;
             border-radius: 16px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease, background 0.2s ease;
             border: 1px solid rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(16px);
-            position: relative;
-            overflow: hidden;
-            will-change: transform;
-        }
-
-        .skill-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transform: translateX(-100%);
-            transition: transform 0.6s ease;
-        }
-
-        .skill-item:hover::before {
-            transform: translateX(100%);
         }
 
         .skill-item:hover {
             background: var(--glass-secondary);
-            transform: scale(1.05) rotateY(10deg);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-            animation: shake 0.5s ease-in-out;
-        }
-
-        @keyframes shake {
-
-            0%,
-            100% {
-                transform: scale(1.05) rotateY(10deg) translateX(0);
-            }
-
-            25% {
-                transform: scale(1.05) rotateY(10deg) translateX(-2px);
-            }
-
-            75% {
-                transform: scale(1.05) rotateY(10deg) translateX(2px);
-            }
+            transform: translateY(-5px);
         }
 
         .skill-icon {
@@ -423,26 +366,14 @@
             border-radius: 15px;
             padding: 25px;
             margin: 20px 0;
-            transition: all 0.3s ease;
+            transition: transform 0.2s ease, background 0.2s ease;
             border: 1px solid var(--glass-border);
             backdrop-filter: blur(10px);
         }
 
         .project-card:hover {
             background: var(--glass-secondary);
-            transform: translateX(10px) rotateX(5deg);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-            animation: slideGlow 0.3s ease-out;
-        }
-
-        @keyframes slideGlow {
-            0% {
-                box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
-            }
-
-            100% {
-                box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-            }
+            transform: translateY(-3px);
         }
 
         .project-title {
@@ -514,15 +445,14 @@
             padding: 20px;
             border: 1px solid var(--glass-border);
             backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
+            transition: transform 0.2s ease, background 0.2s ease;
             display: flex;
             flex-direction: column;
         }
 
         .cert-card:hover {
             background: var(--glass-secondary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
         }
 
         .cert-badge {
@@ -584,14 +514,13 @@
             padding: 0;
             border: 1px solid var(--glass-border);
             backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
+            transition: transform 0.2s ease, background 0.2s ease;
             overflow: hidden;
         }
 
         .blog-card:hover {
             background: var(--glass-secondary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
         }
 
         .blog-image {
