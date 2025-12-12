@@ -570,6 +570,75 @@
             text-align: center;
         }
 
+        /* Compact Blogs */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        .blog-card {
+            background: var(--glass-primary);
+            border-radius: 12px;
+            padding: 0;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .blog-card:hover {
+            background: var(--glass-secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 15px;
+        }
+
+        .blog-title {
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .blog-platform {
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .blog-tag {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .blog-read {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            width: 100%;
+        }
+
         /* Contact section */
         .contact-container {
             display: grid;
@@ -798,6 +867,10 @@
             }
 
             .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1205,80 +1278,62 @@
         <!-- Blogs Section -->
         <section id="blogs" class="glass-card">
             <h2 class="section-title">Latest Blogs</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="./images_artical/ChatGPT Image Dec 4, 2025, 10_18_40 PM.png" alt="Serverless Architecture" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-title">Building a Serverless To-Do List Application</div>
+                        <div class="blog-platform" style="color: #00D084;">Medium</div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Serverless</span>
+                            <span class="blog-tag">AWS Lambda</span>
+                            <span class="blog-tag">DynamoDB</span>
+                        </div>
+                        <a href="https://medium.com/@dhruvmali9039/building-a-serverless-to-do-list-application-my-hands-on-journey-into-serverless-architecture-c8dfb4a790eb" target="_blank" class="btn btn-secondary blog-read">Read Article</a>
+                    </div>
+                </div>
 
-            <div class="project-card">
-                <img src="./images_artical/ChatGPT Image Dec 4, 2025, 10_18_40 PM.png" alt="Serverless Architecture" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
-                <div class="project-title">Building a Serverless To-Do List Application: My Hands-On Journey into Serverless Architecture</div>
-                <div style="color: #00D084; margin-bottom: 10px;">Medium | Published on Medium</div>
-                <div class="project-description">
-                    A hands-on journey into serverless architecture, building a fully functional to-do list application using AWS Lambda, API Gateway, DynamoDB, and S3. Learn about the benefits, challenges, and real-world implementation of serverless computing.
+                <div class="blog-card">
+                    <img src="./images_artical/devops.webp" alt="DevOps" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-title">What is DevOps? A Beginner's Guide</div>
+                        <div class="blog-platform" style="color: #00D084;">Medium</div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">DevOps</span>
+                            <span class="blog-tag">Culture</span>
+                            <span class="blog-tag">Best Practices</span>
+                        </div>
+                        <a href="https://medium.com/@dhruvmali9039/what-is-devops-a-beginners-guide-to-devops-culture-and-practices-929f26b8957c" target="_blank" class="btn btn-secondary blog-read">Read Article</a>
+                    </div>
                 </div>
-                <div class="project-tags">
-                    <span class="tag">Serverless</span>
-                    <span class="tag">AWS Lambda</span>
-                    <span class="tag">API Gateway</span>
-                    <span class="tag">DynamoDB</span>
-                </div>
-                <a href="https://medium.com/@dhruvmali9039/building-a-serverless-to-do-list-application-my-hands-on-journey-into-serverless-architecture-c8dfb4a790eb"
-                    target="_blank" class="btn btn-secondary" style="margin-top: 15px; display: inline-flex;">Read
-                    Article</a>
-            </div>
 
-            <div class="project-card">
-                <img src="./images_artical/devops.webp" alt="DevOps" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
-                <div class="project-title">What is DevOps? A Beginner's Guide to DevOps Culture and Practices</div>
-                <div style="color: #00D084; margin-bottom: 10px;">Medium | Published on Medium</div>
-                <div class="project-description">
-                    A comprehensive beginner's guide exploring DevOps culture, practices, and how it transforms software
-                    development and operations.
+                <div class="blog-card">
+                    <img src="./images_artical/flask_docker.webp" alt="Flask Docker" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-title">Containerizing Flask with Docker</div>
+                        <div class="blog-platform" style="color: #00D084;">Medium</div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Docker</span>
+                            <span class="blog-tag">Flask</span>
+                            <span class="blog-tag">Python</span>
+                        </div>
+                        <a href="https://medium.com/@dhruvmali9039/containerizing-flask-applications-with-docker-a-comprehensive-guide-670f2eac6547" target="_blank" class="btn btn-secondary blog-read">Read Article</a>
+                    </div>
                 </div>
-                <div class="project-tags">
-                    <span class="tag">DevOps</span>
-                    <span class="tag">Culture</span>
-                    <span class="tag">Best Practices</span>
-                    <span class="tag">Beginner Guide</span>
-                </div>
-                <a href="https://medium.com/@dhruvmali9039/what-is-devops-a-beginners-guide-to-devops-culture-and-practices-929f26b8957c"
-                    target="_blank" class="btn btn-secondary" style="margin-top: 15px; display: inline-flex;">Read
-                    Article</a>
-            </div>
 
-            <div class="project-card">
-                <img src="./images_artical/flask_docker.webp" alt="Flask Docker" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
-                <div class="project-title">Containerizing Flask Applications with Docker: A Comprehensive Guide</div>
-                <div style="color: #00D084; margin-bottom: 10px;">Medium | Published on Medium</div>
-                <div class="project-description">
-                    Step-by-step guide to containerizing Flask applications using Docker, covering best practices and
-                    deployment strategies.
+                <div class="blog-card">
+                    <img src="./images_artical/aws.jpg" alt="AWS" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-title">Demystifying AWS: Cloud Basics & 5 Must-Know Services</div>
+                        <div class="blog-platform" style="color: #00D084;">Medium</div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">AWS</span>
+                            <span class="blog-tag">Cloud Computing</span>
+                            <span class="blog-tag">Beginner Guide</span>
+                        </div>
+                        <a href="https://medium.com/@dhruvmali9039/demystifying-aws-cloud-basics-5-must-know-services-f297b1777ba0" target="_blank" class="btn btn-secondary blog-read">Read Article</a>
+                    </div>
                 </div>
-                <div class="project-tags">
-                    <span class="tag">Docker</span>
-                    <span class="tag">Flask</span>
-                    <span class="tag">Containerization</span>
-                    <span class="tag">Python</span>
-                </div>
-                <a href="https://medium.com/@dhruvmali9039/containerizing-flask-applications-with-docker-a-comprehensive-guide-670f2eac6547"
-                    target="_blank" class="btn btn-secondary" style="margin-top: 15px; display: inline-flex;">Read
-                    Article</a>
-            </div>
-
-            <div class="project-card">
-                <img src="./images_artical/aws.jpg" alt="AWS" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
-                <div class="project-title">Demystifying AWS: Cloud Basics & 5 Must-Know Services</div>
-                <div style="color: #00D084; margin-bottom: 10px;">Medium | Published on Medium</div>
-                <div class="project-description">
-                    Essential guide to AWS cloud computing fundamentals and the five most important services every
-                    developer should know.
-                </div>
-                <div class="project-tags">
-                    <span class="tag">AWS</span>
-                    <span class="tag">Cloud Computing</span>
-                    <span class="tag">Cloud Services</span>
-                    <span class="tag">Beginner Guide</span>
-                </div>
-                <a href="https://medium.com/@dhruvmali9039/demystifying-aws-cloud-basics-5-must-know-services-f297b1777ba0"
-                    target="_blank" class="btn btn-secondary" style="margin-top: 15px; display: inline-flex;">Read
-                    Article</a>
             </div>
         </section>
 
